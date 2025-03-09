@@ -1,0 +1,25 @@
+	.data
+welcome:
+	.asciiz "Please enter a floating point number: "
+error:
+	.asciiz "\nInvalid number, re-enter\n"
+result:
+	.asciiz: "\nThe cosine of "
+equalto:
+	.asciiz " = "
+
+	.text
+	.globl main
+
+main:
+	
+input:
+	li $v0, 4
+	la $a0, welcome
+	syscall
+	
+	li $v0, 6
+	syscall
+	move $f20, $f0
+	
+		
